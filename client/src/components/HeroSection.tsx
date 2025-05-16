@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import StarsBackground from "@/components/StarsBackground";
+import novaLogo from "@/assets/nova-logo.jpg";
 
 export default function HeroSection() {
   const scrollToElement = (elementId: string) => {
@@ -35,6 +36,19 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
+          <motion.div
+            className="flex items-center mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <img 
+              src={novaLogo} 
+              alt="NovaDreamers Logo" 
+              className="w-20 h-20 md:w-24 md:h-24 mr-4 object-contain"
+            />
+          </motion.div>
+          
           <motion.h1 
             className="font-['Orbitron'] font-bold text-4xl md:text-6xl mb-4 text-white"
             initial={{ opacity: 0 }}
@@ -58,14 +72,14 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.7 }}
           >
             <Link href="/games">
-              <a className="bg-[hsl(var(--neon-purple))] hover:bg-opacity-80 text-white font-['Rajdhani'] py-3 px-8 rounded-lg transition-all duration-300 text-center shadow-neon-purple">
+              <div className="bg-[hsl(var(--neon-purple))] hover:bg-opacity-80 text-white font-['Rajdhani'] py-3 px-8 rounded-lg transition-all duration-300 text-center shadow-neon-purple cursor-pointer">
                 Discover Our Games
-              </a>
+              </div>
             </Link>
             <Link href="/contact">
-              <a className="border border-[hsl(var(--neon-teal))] text-[hsl(var(--neon-teal))] hover:bg-[hsl(var(--neon-teal))] hover:text-[hsl(var(--space-black))] font-['Rajdhani'] py-3 px-8 rounded-lg transition-all duration-300 text-center">
+              <div className="border border-[hsl(var(--neon-teal))] text-[hsl(var(--neon-teal))] hover:bg-[hsl(var(--neon-teal))] hover:text-[hsl(var(--space-black))] font-['Rajdhani'] py-3 px-8 rounded-lg transition-all duration-300 text-center cursor-pointer">
                 Get In Touch
-              </a>
+              </div>
             </Link>
           </motion.div>
         </motion.div>

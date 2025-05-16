@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import novaLogo from "@/assets/nova-logo.jpg";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,16 +22,6 @@ export default function Navbar() {
     setIsMenuOpen(false);
   }, [location]);
 
-  const logoIcon = (
-    <div className="w-10 h-10 mr-2 relative overflow-hidden">
-      <div className="w-full h-full rounded-full bg-gradient-to-r from-[hsl(var(--neon-teal))] via-[hsl(var(--neon-purple))] to-[hsl(var(--neon-pink))] flex items-center justify-center">
-        <div className="w-9 h-9 rounded-full bg-[hsl(var(--space-black))] flex items-center justify-center">
-          <span className="text-[hsl(var(--neon-teal))] text-xl">★</span>
-        </div>
-      </div>
-    </div>
-  );
-
   const menuItems = [
     { path: "/", label: "Home", hoverColor: "hover:text-[hsl(var(--neon-teal))]" },
     { path: "/games", label: "Games", hoverColor: "hover:text-[hsl(var(--neon-purple))]" },
@@ -46,26 +37,28 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <nav className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/">
-            <a className="flex items-center">
-              {logoIcon}
-              <span className="font-['Orbitron'] font-bold text-xl md:text-2xl text-glow text-white">
-                NovaDreamers
-              </span>
-            </a>
-          </Link>
+          <div className="flex items-center">
+            <Link href="/">
+              <div className="flex items-center cursor-pointer">
+                <img src={novaLogo} alt="NovaDreamers Logo" className="w-10 h-10 mr-2 rounded-full object-contain" />
+                <span className="font-['Orbitron'] font-bold text-xl md:text-2xl text-glow text-white">
+                  NovaDreamers
+                </span>
+              </div>
+            </Link>
+          </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {menuItems.map((item) => (
               <Link key={item.path} href={item.path}>
-                <a className={cn(
-                  "font-['Rajdhani'] text-lg font-medium transition-colors duration-300",
+                <div className={cn(
+                  "font-['Rajdhani'] text-lg font-medium transition-colors duration-300 cursor-pointer",
                   item.hoverColor,
                   location === item.path && "text-[hsl(var(--neon-teal))]"
                 )}>
                   {item.label}
-                </a>
+                </div>
               </Link>
             ))}
           </div>
@@ -95,13 +88,13 @@ export default function Navbar() {
               <div className="flex flex-col space-y-4 py-4 px-2 bg-[hsl(var(--space-black))] rounded-lg neon-border">
                 {menuItems.map((item) => (
                   <Link key={item.path} href={item.path}>
-                    <a className={cn(
-                      "font-['Rajdhani'] text-lg font-medium transition-colors duration-300 px-4 py-2",
+                    <div className={cn(
+                      "font-['Rajdhani'] text-lg font-medium transition-colors duration-300 px-4 py-2 cursor-pointer",
                       item.hoverColor,
                       location === item.path && "text-[hsl(var(--neon-teal))]"
                     )}>
                       {item.label}
-                    </a>
+                    </div>
                   </Link>
                 ))}
               </div>

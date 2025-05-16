@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import Newsletter from "@/components/Newsletter";
 import { FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
+import novaLogo from "@/assets/nova-logo.jpg";
 
 export default function Footer() {
   return (
@@ -12,16 +13,10 @@ export default function Footer() {
           {/* Logo and About */}
           <div>
             <Link href="/">
-              <a className="flex items-center mb-6">
-                <div className="w-10 h-10 mr-2 relative overflow-hidden">
-                  <div className="w-full h-full rounded-full bg-gradient-to-r from-[hsl(var(--neon-teal))] via-[hsl(var(--neon-purple))] to-[hsl(var(--neon-pink))] flex items-center justify-center">
-                    <div className="w-9 h-9 rounded-full bg-[hsl(var(--space-black))] flex items-center justify-center">
-                      <span className="text-[hsl(var(--neon-teal))] text-xl">★</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="flex items-center mb-6 cursor-pointer">
+                <img src={novaLogo} alt="NovaDreamers Logo" className="w-10 h-10 mr-2 rounded-full object-contain" />
                 <span className="font-['Orbitron'] font-bold text-xl text-white">NovaDreamers</span>
-              </a>
+              </div>
             </Link>
             <p className="text-[hsl(var(--muted-foreground))] mb-6">
               Creating immersive gaming experiences that transport players to new worlds and realities.
@@ -45,30 +40,30 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link href="/">
-                  <a className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--neon-teal))] transition-colors duration-300">
+                  <div className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--neon-teal))] transition-colors duration-300 cursor-pointer">
                     Home
-                  </a>
+                  </div>
                 </Link>
               </li>
               <li>
                 <Link href="/games">
-                  <a className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--neon-purple))] transition-colors duration-300">
+                  <div className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--neon-purple))] transition-colors duration-300 cursor-pointer">
                     Games
-                  </a>
+                  </div>
                 </Link>
               </li>
               <li>
                 <Link href="/team">
-                  <a className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--neon-pink))] transition-colors duration-300">
+                  <div className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--neon-pink))] transition-colors duration-300 cursor-pointer">
                     Our Team
-                  </a>
+                  </div>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <a className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--neon-teal))] transition-colors duration-300">
+                  <div className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--neon-teal))] transition-colors duration-300 cursor-pointer">
                     Contact
-                  </a>
+                  </div>
                 </Link>
               </li>
             </ul>
