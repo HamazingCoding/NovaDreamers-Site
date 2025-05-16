@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+  
+  /* NovaDreamers color scheme */
+  --space-black: 226 43% 7%;
+  --space-gray: 234 15% 23%;
+  --neon-teal: 180 100% 40.5%;
+  --neon-purple: 275 75% 48%;
+  --neon-pink: 300 100% 50%;
+  --text-light: 218 100% 97%;
+  
+  /* Chart colors */
+  --chart-1: var(--neon-teal);
+  --chart-2: var(--neon-purple);
+  --chart-3: var(--neon-pink);
+  --chart-4: 240 6% 90%;
+  --chart-5: 240 5% 70%;
+  
+  /* Sidebar colors */
+  --sidebar-background: var(--space-black);
+  --sidebar-foreground: var(--text-light);
+  --sidebar-primary: var(--neon-teal);
+  --sidebar-primary-foreground: var(--space-black);
+  --sidebar-accent: var(--neon-purple);
+  --sidebar-accent-foreground: var(--text-light);
+  --sidebar-border: var(--space-gray);
+  --sidebar-ring: var(--neon-teal);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  button, .btn, .button {
+    font-family: 'Rajdhani', sans-serif;
+  }
+}
+
+@layer components {
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(var(--neon-teal))] via-[hsl(var(--neon-purple))] to-[hsl(var(--neon-pink))];
+  }
+  
+  .neon-border {
+    @apply relative;
+    &::after {
+      content: '';
+      @apply absolute inset-0 border rounded-lg pointer-events-none;
+      border-image-slice: 1;
+      border-width: 1px;
+      border-image-source: linear-gradient(to right, hsl(var(--neon-teal)), hsl(var(--neon-purple)), hsl(var(--neon-pink)));
+      box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+    }
+  }
+  
+  .shadow-neon-teal {
+    box-shadow: 0 0 10px hsl(var(--neon-teal)), 0 0 20px hsl(var(--neon-teal));
+  }
+  
+  .shadow-neon-purple {
+    box-shadow: 0 0 10px hsl(var(--neon-purple)), 0 0 20px hsl(var(--neon-purple));
+  }
+  
+  .shadow-neon-pink {
+    box-shadow: 0 0 10px hsl(var(--neon-pink)), 0 0 20px hsl(var(--neon-pink));
+  }
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.2; }
+}
+
+/* Stars background */
+.stars {
+  @apply absolute inset-0 z-0 overflow-hidden;
+}
+
+.star {
+  @apply absolute bg-white rounded-full;
+  animation: twinkle 5s infinite;
+}
