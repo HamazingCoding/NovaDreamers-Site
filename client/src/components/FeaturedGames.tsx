@@ -44,9 +44,9 @@ export default function FeaturedGames() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <Link href="/games">
-            <a className="inline-block px-8 py-3 border-2 border-[hsl(var(--neon-purple))] text-[hsl(var(--neon-purple))] font-['Rajdhani'] rounded-lg hover:bg-[hsl(var(--neon-purple))] hover:text-white transition-all duration-300">
+            <div className="inline-block px-8 py-3 border-2 border-[hsl(var(--neon-purple))] text-[hsl(var(--neon-purple))] font-['Rajdhani'] rounded-lg hover:bg-[hsl(var(--neon-purple))] hover:text-white transition-all duration-300 cursor-pointer">
               View All Games
-            </a>
+            </div>
           </Link>
         </motion.div>
       </div>
