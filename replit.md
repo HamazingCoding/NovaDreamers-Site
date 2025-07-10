@@ -19,6 +19,11 @@ A modern, responsive website for the fictional game development studio "NovaDrea
 
 ## Recent Changes
 
+### Game Content Updates (January 2025)
+- ✓ Renamed "Project Aegis" to "Saving Private Teddy"
+- ✓ Updated game description with new storyline about evil toys and Lord Snuggledoom
+- ✓ Changed game ID from "project-aegis" to "saving-private-teddy"
+
 ### Logo Updates (January 2025)
 - ✓ Replaced old logo (nova-logo.jpg) with new black logo (nova-logo-black.jpeg)
 - ✓ Updated to final clearnova.png logo with rocket, moon, and stars design
