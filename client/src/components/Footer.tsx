@@ -2,8 +2,11 @@ import { Link } from "wouter";
 import Newsletter from "@/components/Newsletter";
 import { FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
 import novaLogo from "@/assets/clearnova.png";
+import { useEasterEggs } from "@/hooks/useEasterEggs";
+import EasterEggManager from "@/components/EasterEggs/EasterEggManager";
 
 export default function Footer() {
+  const { activeEasterEgg, triggerEasterEgg, closeEasterEgg } = useEasterEggs();
   return (
     <footer className="bg-[hsl(var(--space-black))] py-12 relative">
       <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--neon-purple))] to-[hsl(var(--space-black))] opacity-10"></div>
@@ -102,7 +105,11 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-[hsl(var(--border))] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-[hsl(var(--muted-foreground))] text-sm mb-4 md:mb-0">
+          <p 
+            className="text-[hsl(var(--muted-foreground))] text-sm mb-4 md:mb-0 cursor-pointer hover:text-[hsl(var(--neon-teal))] transition-colors duration-300" 
+            onClick={() => triggerEasterEgg('typing')}
+            title="Click for a surprise!"
+          >
             © 2025 NovaDreamers Studio. All rights reserved.
           </p>
           <p className="text-[hsl(var(--muted-foreground))] text-sm">
@@ -110,6 +117,9 @@ export default function Footer() {
           </p>
         </div>
       </div>
+      
+      {/* Easter Egg Manager */}
+      <EasterEggManager trigger={activeEasterEgg} onClose={closeEasterEgg} />
     </footer>
   );
 }

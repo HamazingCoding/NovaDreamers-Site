@@ -3,11 +3,16 @@ import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import novaLogo from "@/assets/clearnova.png";
+import { useEasterEggs } from "@/hooks/useEasterEggs";
+import EasterEggManager from "@/components/EasterEggs/EasterEggManager";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [location] = useLocation();
+  const [logoClickCount, setLogoClickCount] = useState(0);
+  const [logoClickTimer, setLogoClickTimer] = useState<NodeJS.Timeout | null>(null);
+  const { activeEasterEgg, triggerEasterEgg, closeEasterEgg } = useEasterEggs();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +34,25 @@ export default function Navbar() {
     { path: "/contact", label: "Contact", hoverColor: "hover:text-[hsl(var(--neon-teal))]" },
   ];
 
+  const handleLogoClick = () => {
+    setLogoClickCount(prev => prev + 1);
+    
+    if (logoClickTimer) {
+      clearTimeout(logoClickTimer);
+    }
+    
+    const timer = setTimeout(() => {
+      setLogoClickCount(0);
+    }, 2000);
+    
+    setLogoClickTimer(timer);
+    
+    if (logoClickCount >= 4) { // 5 clicks total
+      triggerEasterEgg('sequence');
+      setLogoClickCount(0);
+    }
+  };
+
   return (
     <header className={cn(
       "fixed w-full z-50 transition-all duration-300",
@@ -39,8 +63,8 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/">
-              <div className="flex items-center cursor-pointer">
-                <img src={novaLogo} alt="NovaDreamers Logo" className="w-10 h-10 mr-2 rounded-full object-contain" />
+              <div className="flex items-center cursor-pointer" onClick={handleLogoClick}>
+                <img src={novaLogo} alt="NovaDreamers Logo" className="w-10 h-10 mr-2 rounded-full object-contain hover:scale-110 transition-transform duration-300" />
                 <span className="font-['Orbitron'] font-bold text-xl md:text-2xl text-glow text-white">
                   NovaDreamers
                 </span>
@@ -102,6 +126,9 @@ export default function Navbar() {
           )}
         </AnimatePresence>
       </div>
+      
+      {/* Easter Egg Manager */}
+      <EasterEggManager trigger={activeEasterEgg} onClose={closeEasterEgg} />
     </header>
   );
 }

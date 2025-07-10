@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import StarsBackground from "@/components/StarsBackground";
 import novaLogo from "@/assets/clearnova.png";
+import { useEasterEggs } from "@/hooks/useEasterEggs";
+import EasterEggManager from "@/components/EasterEggs/EasterEggManager";
 
 export default function HeroSection() {
+  const { activeEasterEgg, triggerEasterEgg, closeEasterEgg } = useEasterEggs();
   const scrollToElement = (elementId: string) => {
     const element = document.getElementById(elementId);
     if (element) {
@@ -58,10 +61,12 @@ export default function HeroSection() {
             Nova<span className="gradient-text">Dreamers</span> Studio
           </motion.h1>
           <motion.p 
-            className="font-['Rajdhani'] text-xl md:text-2xl mb-8 text-glow text-[hsl(var(--neon-teal))]"
+            className="font-['Rajdhani'] text-xl md:text-2xl mb-8 text-glow text-[hsl(var(--neon-teal))] cursor-pointer hover:text-[hsl(var(--neon-purple))] transition-colors duration-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
+            onClick={() => triggerEasterEgg('click')}
+            title="Click for a surprise!"
           >
             Dream. Develop. Dominate the Game Worlds.
           </motion.p>
@@ -102,6 +107,9 @@ export default function HeroSection() {
           </svg>
         </button>
       </motion.div>
+      
+      {/* Easter Egg Manager */}
+      <EasterEggManager trigger={activeEasterEgg} onClose={closeEasterEgg} />
     </section>
   );
 }

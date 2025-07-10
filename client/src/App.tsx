@@ -8,6 +8,7 @@ import Home from "@/pages/Home";
 import Games from "@/pages/Games";
 import Team from "@/pages/Team";
 import Contact from "@/pages/Contact";
+import EasterEggIndicator from "@/components/EasterEggs/EasterEggIndicator";
 import { useEffect } from "react";
 
 function Router() {
@@ -68,6 +69,7 @@ function App() {
           <Router />
         </main>
         <Footer />
+        <EasterEggIndicator />
       </div>
     </TooltipProvider>
   );
