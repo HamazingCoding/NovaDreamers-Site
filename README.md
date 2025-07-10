@@ -2,7 +2,7 @@
 
 A sleek, modern, and responsive website for the fictional game development studio "NovaDreamers Studio" with a futuristic aesthetic.
 
-![NovaDreamers Logo](/client/src/assets/nova-logo.jpg)
+![NovaDreamers Logo](/client/src/assets/nova-logo-black.jpeg)
 
 ## Features
 
