@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import Newsletter from "@/components/Newsletter";
 import { FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
-import novaLogo from "@/assets/nova-logo-black.jpeg";
+import novaLogo from "@/assets/clearnova.png";
 
 export default function Footer() {
   return (

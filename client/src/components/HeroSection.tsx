@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import StarsBackground from "@/components/StarsBackground";
-import novaLogo from "@/assets/nova-logo-black.jpeg";
+import novaLogo from "@/assets/clearnova.png";
 
 export default function HeroSection() {
   const scrollToElement = (elementId: string) => {
