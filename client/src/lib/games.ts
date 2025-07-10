@@ -25,7 +25,7 @@ export const games: Game[] = [
     title: "Chrono Resonance",
     shortDesc: "Rhythm Arcade",
     description: "A retro-styled rhythm game where players navigate through time periods, matching beats to overcome challenges and restore musical harmony to the timeline.",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    image: "/src/assets/chrono-resonance.jpeg",
     releaseInfo: "Released 2024",
     status: "Featured",
     category: "arcade"

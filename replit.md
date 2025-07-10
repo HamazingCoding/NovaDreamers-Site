@@ -35,6 +35,7 @@ A modern, responsive website for the fictional game development studio "NovaDrea
 - ✓ Changed game ID from "project-aegis" to "saving-private-teddy"
 - ✓ Replaced "Chrono Veil" with "Within the Walls" psychological horror game
 - ✓ Added custom game image and atmospheric description for Within the Walls
+- ✓ Updated Chrono Resonance with custom game image
 - ✓ Fixed nested link warning in Team page navigation
 
 ### Logo Updates (January 2025)
