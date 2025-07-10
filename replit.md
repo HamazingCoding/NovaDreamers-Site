@@ -37,6 +37,7 @@ A modern, responsive website for the fictional game development studio "NovaDrea
 - ✓ Added custom game image and atmospheric description for Within the Walls
 - ✓ Updated Chrono Resonance with custom game image
 - ✓ Fixed nested link warning in Team page navigation
+- ✓ Removed status tags from all games ("In Development", "New Release", "Featured")
 
 ### Logo Updates (January 2025)
 - ✓ Replaced old logo (nova-logo.jpg) with new black logo (nova-logo-black.jpeg)

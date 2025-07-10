@@ -41,7 +41,7 @@ export default function GameCard({ game }: GameCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--space-black))] to-transparent opacity-70"></div>
         <div className="absolute bottom-0 left-0 w-full p-6">
           <h3 className={`font-['Orbitron'] text-xl ${colors.text} mb-1`}>{game.title}</h3>
-          <p className="text-sm text-[hsl(var(--muted-foreground))]">{game.shortDesc} | {game.status}</p>
+          <p className="text-sm text-[hsl(var(--muted-foreground))]">{game.shortDesc}</p>
         </div>
       </div>
       <div className="p-6">
