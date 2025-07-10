@@ -33,6 +33,9 @@ A modern, responsive website for the fictional game development studio "NovaDrea
 - ✓ Renamed "Project Aegis" to "Saving Private Teddy"
 - ✓ Updated game description with new storyline about evil toys and Lord Snuggledoom
 - ✓ Changed game ID from "project-aegis" to "saving-private-teddy"
+- ✓ Replaced "Chrono Veil" with "Within the Walls" psychological horror game
+- ✓ Added custom game image and atmospheric description for Within the Walls
+- ✓ Fixed nested link warning in Team page navigation
 
 ### Logo Updates (January 2025)
 - ✓ Replaced old logo (nova-logo.jpg) with new black logo (nova-logo-black.jpeg)

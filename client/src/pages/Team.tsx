@@ -55,9 +55,9 @@ export default function Team() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Link href="/contact">
-            <a className="inline-block px-8 py-3 bg-gradient-to-r from-[hsl(var(--neon-purple))] to-[hsl(var(--neon-pink))] text-white font-['Rajdhani'] rounded-lg hover:shadow-neon-purple transition-all duration-300">
+            <div className="inline-block px-8 py-3 bg-gradient-to-r from-[hsl(var(--neon-purple))] to-[hsl(var(--neon-pink))] text-white font-['Rajdhani'] rounded-lg hover:shadow-neon-purple transition-all duration-300 cursor-pointer">
               Work With Us
-            </a>
+            </div>
           </Link>
         </motion.div>
       </div>

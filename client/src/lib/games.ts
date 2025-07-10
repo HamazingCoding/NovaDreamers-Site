@@ -31,11 +31,11 @@ export const games: Game[] = [
     category: "arcade"
   },
   {
-    id: "chrono-veil",
-    title: "Chrono Veil",
-    shortDesc: "Adventure Maze",
-    description: "An Indiana Jones inspired adventure where players navigate through ancient temples, solving puzzles and avoiding traps to uncover time-bending artifacts.",
-    image: "https://images.unsplash.com/photo-1604871000636-074fa5117945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    id: "within-the-walls",
+    title: "Within the Walls",
+    shortDesc: "Psychological Horror",
+    description: "Trapped in a forgotten house that shifts around you, your only goal is to escape—if escape is even possible. Every door leads deeper, every sound might be real... or not. As you explore its shifting hallways, you'll encounter cryptic puzzles, unsettling sounds, and disturbing secrets embedded in the walls themselves. In Within the Walls, you'll uncover fragments of a story left behind, using your wits to survive the dread creeping through the walls. Are the whispers guiding you—or luring you?",
+    image: "/src/assets/within-the-walls.png",
     releaseInfo: "Released 2023",
     status: "New Release",
     category: "adventure"
