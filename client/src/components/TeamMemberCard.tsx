@@ -21,6 +21,12 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
       gradient: "bg-gradient-to-br from-[hsl(var(--neon-teal))] to-[hsl(var(--neon-pink))]",
       text: "text-[hsl(var(--neon-teal))]",
       hover: "hover:text-[hsl(var(--neon-teal))]"
+    },
+    pink: {
+      border: "border-[hsl(var(--neon-pink))]",
+      gradient: "bg-gradient-to-br from-[hsl(var(--neon-pink))] to-[hsl(var(--neon-purple))]",
+      text: "text-[hsl(var(--neon-pink))]",
+      hover: "hover:text-[hsl(var(--neon-pink))]"
     }
   };
 

@@ -39,6 +39,14 @@ A modern, responsive website for the fictional game development studio "NovaDrea
 - ✓ Fixed nested link warning in Team page navigation
 - ✓ Removed status tags from all games ("In Development", "New Release", "Featured")
 
+### Team and Social Media Updates (January 2025)
+- ✓ Updated social media links: replaced Twitter/YouTube with Instagram/LinkedIn
+- ✓ Updated Hamza's experience from 8+ years to 3 years
+- ✓ Removed film background from Eve's description
+- ✓ Added Sachin as Creative Generalist, Game Asset Designer, and Narrative Designer
+- ✓ Added Krishnashree as Creative & Operations Lead and Marketing Manager
+- ✓ Updated TeamMemberCard component to support pink color theme
+
 ### Logo Updates (January 2025)
 - ✓ Replaced old logo (nova-logo.jpg) with new black logo (nova-logo-black.jpeg)
 - ✓ Updated to final clearnova.png logo with rocket, moon, and stars design

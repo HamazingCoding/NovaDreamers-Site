@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import Newsletter from "@/components/Newsletter";
-import { FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaDiscord } from "react-icons/fa";
 import novaLogo from "@/assets/clearnova.png";
 import { useEasterEggs } from "@/hooks/useEasterEggs";
 import EasterEggManager from "@/components/EasterEggs/EasterEggManager";
@@ -25,11 +25,11 @@ export default function Footer() {
               Creating immersive gaming experiences that transport players to new worlds and realities.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--neon-teal))] transition-colors duration-300">
-                <FaTwitter className="text-xl" />
+              <a href="https://www.instagram.com/madebynova.ae?igsh=dG16bmpndnp1NGw4" target="_blank" rel="noopener noreferrer" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--neon-teal))] transition-colors duration-300">
+                <FaInstagram className="text-xl" />
               </a>
-              <a href="#" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--neon-purple))] transition-colors duration-300">
-                <FaYoutube className="text-xl" />
+              <a href="https://www.linkedin.com/company/107035736/admin/dashboard" target="_blank" rel="noopener noreferrer" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--neon-purple))] transition-colors duration-300">
+                <FaLinkedin className="text-xl" />
               </a>
               <a href="#" className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--neon-pink))] transition-colors duration-300">
                 <FaDiscord className="text-xl" />
