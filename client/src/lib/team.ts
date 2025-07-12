@@ -60,5 +60,27 @@ export const teamMembers: TeamMember[] = [
       linkedin: "#",
       portfolio: "#"
     }
+  },
+  {
+    id: "shreesh",
+    name: "Shreesh",
+    role: "Bug Fixer, Game Programmer",
+    description: "Dedicated to ensuring smooth gameplay experiences through meticulous debugging and programming expertise. Focuses on identifying and resolving technical issues to maintain game quality and performance.",
+    color: "teal",
+    socialLinks: {
+      linkedin: "#",
+      github: "#"
+    }
+  },
+  {
+    id: "elmer",
+    name: "Elmer",
+    role: "Sound Engineer, Developer",
+    description: "Creates immersive audio experiences and contributes to development processes. Specializes in sound design, audio engineering, and technical implementation to enhance game atmosphere and player engagement.",
+    color: "pink",
+    socialLinks: {
+      linkedin: "#",
+      portfolio: "#"
+    }
   }
 ];

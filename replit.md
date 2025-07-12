@@ -45,6 +45,8 @@ A modern, responsive website for the fictional game development studio "NovaDrea
 - ✓ Removed film background from Eve's description
 - ✓ Added Sachin as Creative Generalist, Game Asset Designer, and Narrative Designer
 - ✓ Added Krishnashree as Creative & Operations Lead and Marketing Manager
+- ✓ Added Shreesh as Bug Fixer and Game Programmer
+- ✓ Added Elmer as Sound Engineer and Developer
 - ✓ Updated TeamMemberCard component to support pink color theme
 
 ### Logo Updates (January 2025)
