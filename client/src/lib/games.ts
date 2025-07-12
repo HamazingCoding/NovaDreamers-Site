@@ -14,7 +14,7 @@ export const games: Game[] = [
     title: "Saving Private Teddy",
     shortDesc: "Tower Defense Shooter",
     description: "A strategic tower defense game where players build and upgrade defense systems to protect against waves of evil toys lead by the anarchist Teddybear, Lord Snuggledoom. What compels his Rebellion against the child of the playground?",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    image: "/src/assets/saving-private-teddy.png",
     releaseInfo: "Coming 2025",
     category: "strategy"
   },
